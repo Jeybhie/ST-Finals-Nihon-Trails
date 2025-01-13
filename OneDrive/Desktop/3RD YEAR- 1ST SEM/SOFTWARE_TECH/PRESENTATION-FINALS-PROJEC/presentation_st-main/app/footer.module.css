@@ -1,0 +1,100 @@
+.footerMainContainer {
+  position: absolute;
+  bottom: 0%;
+  height: 50vh;
+  width: 100%;
+  background-color: rgb(47, 107, 89);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 10px;
+  color: rgb(94, 207, 173);
+}
+.footerContainer {
+  position: relative;
+  width: 90%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.footerContainer:after {
+  position: absolute;
+  content: "";
+  bottom: 0%;
+  background-color: rgb(94, 207, 173);
+  height: 0.2rem;
+  width: 100%;
+}
+.socialMediaContainer {
+  color: white;
+  font-size: 13px;
+  height: 12vh;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+.socialMediaContainer p:hover {
+  color: black;
+  cursor: pointer;
+}
+.websiteTitleArea {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2%;
+  font-size: 12px;
+}
+.websiteTitleArea img {
+  width: 60%;
+}
+.websitetitlebutton {
+  transition: ease-in 0.2s;
+  width: 50%;
+  height: 5vh;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(94, 207, 173);
+}
+.websitetitlebutton:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(94, 207, 173);
+}
+.footerHeaders {
+  font-size: 15px;
+}
+.contactUs {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contactUs p:hover {
+  cursor: pointer;
+  color: white;
+}
+.contacts img {
+  width: 10%;
+}
+.contacts {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3%;
+}
+.helpFulLinks p:hover {
+  cursor: pointer;
+  color: white;
+}
+.information p:hover {
+  cursor: pointer;
+  color: white;
+}

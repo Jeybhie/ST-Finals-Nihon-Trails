@@ -1,0 +1,209 @@
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+.navigationContainer {
+  color: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  /* box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3); */
+  width: 100%;
+  height: 10vh;
+  z-index: 11;
+  top: 0;
+}
+.navigationBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  height: 80%;
+  width: 40%;
+}
+.navLinks {
+  position: relative;
+}
+.navLinks::after {
+  margin: 0;
+  content: " ";
+  justify-self: end;
+  background-color: white;
+  position: absolute;
+  height: 2px;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  transition: ease-in 0.3s;
+}
+.navLinks:hover:after {
+  cursor: pointer;
+  width: 100%;
+}
+.toggleCircle {
+  text-align: center;
+  color: white;
+  background-color: white;
+  width: 40%;
+  height: 100%;
+  border-radius: 50%;
+  transition: ease-in 0.2s;
+  z-index: 12;
+}
+.toggleCircle:hover {
+  background-color: rgb(168, 168, 168);
+  color: rgb(168, 168, 168);
+}
+.toggleCircleClicked {
+  transform: translateX(150%);
+}
+.iconsSun {
+  position: absolute;
+  width: 30%;
+  left: 10%;
+}
+.iconsMoon {
+  position: absolute;
+  width: 30%;
+  right: 10%;
+}
+/*------------------parallax layer-------------*/
+.sakuraBranchImage {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  z-index: -1;
+  width: 40%;
+}
+.websiteTitle {
+  position: absolute;
+  left: 3%;
+  width: 7%;
+  z-index: 10;
+  top: 2%;
+}
+.foregroundMountains {
+  position: absolute;
+  margin: 0%;
+  width: 100%;
+  top: 0;
+  left: 0%;
+}
+.backgroundImage {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  top: 0%;
+  left: 0;
+}
+/*------------------PARALLAX LAYERS-------------*/
+.parallaxContainer {
+  margin: 0%;
+  top: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+/*--------------------shooting star-----------------*/
+.shootingStarContainer {
+  position: absolute;
+  width: 100%;
+  height: 120vh;
+  z-index: 4;
+  opacity: 0;
+}
+.shootingStarContainerAppear {
+  transition-delay: 1s;
+  opacity: 1;
+}
+.shootingStar {
+  position: absolute;
+  background-color: white;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  top: -5%;
+  left: 50%;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.1),
+    0px 0px 0px 3px rgba(255, 255, 255, 0.1), 0px 0px 7px rgba(255, 255, 255, 1);
+  animation: shootingstar 7s linear infinite;
+}
+.shootingStar:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    white,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+}
+.shootingStar:nth-child(1) {
+  top: -5%;
+  left: 30%;
+  animation-delay: 4s;
+  animation-duration: 3.8s;
+}
+.shootingStar:nth-child(2) {
+  top: -5%;
+  left: 90%;
+  animation-delay: 6s;
+  animation-duration: 7s;
+}
+.shootingStar:nth-child(3) {
+  top: -5%;
+  left: 99%;
+  animation-delay: 2s;
+  animation-duration: 3.5s;
+}
+
+@keyframes shootingstar {
+  0% {
+    transform: rotate(315deg) translateX(0%);
+  }
+  100% {
+    transform: rotate(315deg) translateX(-1000px);
+  }
+}
+@keyframes enlarge {
+  0% {
+    background-color: rgb(84, 68, 111);
+  }
+  90% {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px;
+    background-color: rgb(84, 68, 111);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+/*-----------------------clouds----------------------*/
+.cloudsContainer {
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  position: relative;
+  opacity: 1;
+}
+.cloudsContainerDisappear {
+  opacity: 0;
+}
+.clouds {
+  opacity: 0.3;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}

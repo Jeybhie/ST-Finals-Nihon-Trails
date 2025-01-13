@@ -1,0 +1,419 @@
+.ContentMainContainer {
+  position: relative;
+  height: 380vh;
+  width: 100%;
+}
+.headerContainer:before {
+  left: 5%;
+  margin-top: 5%;
+  content: "";
+  background-color: rgb(94, 207, 173);
+  border-radius: 0px 5px 5px 0px;
+  height: 10px;
+  width: 90%;
+  position: absolute;
+  top: 0%;
+}
+.headerContainer {
+  margin-top: 5%;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+}
+.regionsOfJapanContainer {
+  position: absolute;
+  left: 5%;
+  margin-top: 1%;
+  width: 30%;
+  height: 13vh;
+  background-color: rgba(94, 207, 173, 0.756);
+  border-radius: 0px 17px 17px 17px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-10%);
+  transition: 3s ease;
+  opacity: 0;
+}
+.regionsOfJapanContainerShow {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.regionMapandPicturesContainer {
+  top: 0%;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.regionMapandPicturesContainer2::before {
+  content: "";
+  background-color: rgb(94, 207, 173);
+  border-radius: 0px 5px 5px 0px;
+  height: 10px;
+  width: 90%;
+  position: absolute;
+  top: 0%;
+}
+.regionMapandPicturesContainer2 {
+  position: absolute;
+  top: 150vh;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.regionsContainer {
+  left: 0%;
+  padding-left: 5%;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10%;
+}
+.regionsContainer img {
+  width: 80%;
+}
+.regionName {
+  margin-left: -30%;
+  font-size: 30px;
+  text-align: center;
+}
+.regionPicturesMainContainer {
+  top: 9%;
+  position: absolute;
+  right: 0%;
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.regionRowContainer {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+.pictureContainer {
+  position: relative;
+  width: 28%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 5px solid rgba(128, 128, 128, 0.404);
+  transition: 2s ease-in-out;
+  opacity: 0;
+}
+
+.pictureContainer img {
+  height: 100%;
+  transition: 1s ease;
+}
+.pictureContainer img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.detailsPlaceContainer {
+  width: 88%;
+  height: 5%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 3.33%;
+  font-size: 13px;
+}
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  width: 33.3%;
+  height: 90%;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.placeTitle {
+  margin-left: 1%;
+}
+.subTitle {
+  color: grey;
+  font-size: 10px;
+  margin-left: 5px;
+}
+.details button {
+  margin-left: auto;
+  width: 30%;
+  height: 100%;
+  border-radius: 10px 0px 10px 10px;
+  background-color: rgb(94, 207, 173);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 13px;
+}
+.details button:hover {
+  cursor: pointer;
+  background-color: lightblue;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+.details button:active {
+  color: rgb(94, 207, 173);
+  background-color: rgb(40, 64, 72);
+}
+.placeTitle {
+  font-size: 12px;
+  color: black;
+}
+
+/*---------------------------carousel-----------------------*/
+.carouselContainer {
+  position: absolute;
+  left: 0;
+  align-self: flex-start;
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  transition: 1s ease;
+}
+.show2 {
+  opacity: 1;
+}
+.sectionImageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.imageContainer {
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageContainer img {
+  cursor: pointer !important;
+  height: 100%;
+}
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.173);
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+.prevButton {
+  left: 5%;
+}
+.nextButton {
+  right: 5%;
+}
+.regionNameHeader {
+  top: 3%;
+  left: 30%;
+  position: absolute;
+  font-size: 30px;
+  text-align: center;
+}
+/*----------------------paragraph-----------------------*/
+.paragraph1 {
+  position: absolute;
+  top: 50%;
+  font-size: 15px;
+  left: 10%;
+  transform: translateX(-5%);
+  opacity: 0;
+}
+.paragraph1before {
+  background-color: rgb(94, 207, 173);
+  height: 0%;
+  width: 5px;
+  position: absolute;
+  top: 50%;
+  left: 9%;
+}
+
+.paragraph2 {
+  position: absolute;
+  top: 90%;
+  font-size: 40px;
+  left: 8%;
+}
+.paragraph2:before {
+  content: "Olga Yemets|credit: Olga Yemets/Dreamstime|";
+  position: absolute;
+  font-size: 10px;
+  top: -110%;
+  right: -57vw;
+  color: rgb(94, 207, 173);
+}
+.paragraph2:after {
+  content: "";
+  width: 150%;
+  height: 10px;
+  position: absolute;
+  font-size: 10px;
+  top: 50%;
+  right: -57vw;
+  border-radius: 10px 0px 0px 10px;
+  background-color: rgb(94, 207, 173);
+}
+.exploreContainer {
+  position: absolute;
+  top: 110%;
+  width: 94%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4%;
+}
+.exploreRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 4%;
+  width: 100%;
+  height: 48%;
+}
+.exploreBox {
+  width: 15%;
+  height: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  border: solid rgb(94, 207, 173) 2px;
+}
+.exploreBox:hover {
+  cursor: pointer;
+  background-color: rgb(94, 207, 173);
+  color: white;
+}
+.exploreImage1 {
+  transform: scale(0.8);
+  opacity: 0;
+  top: 22%;
+  position: absolute;
+  width: 30%;
+  right: 2%;
+  background-color: rgb(94, 207, 173);
+  padding: 0.5%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.289);
+}
+.exploreImageContainer {
+  width: 100%;
+  height: 95%;
+  overflow: hidden;
+}
+.exploreImage1 img {
+  width: 100%;
+  transition: 1s ease-in-out;
+}
+.exploreImage1 img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+/*-----------------------modalstyle---------------------*/
+
+.modalOutsideBody {
+  display: none;
+  top: -2%;
+  position: absolute;
+  width: 100%;
+  height: 150vh;
+  background-color: rgba(0, 0, 0, 0.71);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.modalBody {
+  position: relative;
+  margin-top: 10%;
+  height: 85vh;
+  width: 60%;
+  background-color: white;
+  overflow-y: scroll;
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 13px;
+}
+.modalImage {
+  width: 80%;
+  height: 50vh;
+}
+.modalImage img {
+  width: 100%;
+}
+.modalContent {
+  gap: 15px;
+  margin-top: 5vh;
+  flex-direction: column;
+  display: flex;
+  padding-bottom: 10vh;
+}
+.modalTitle {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  font-size: 25px;
+}
+.modaRlow {
+  display: flex;
+  justify-content: space-between;
+}
+.modalRowExit {
+  top: 1%;
+  left: 1%;
+  width: 99%;
+  display: flex;
+  position: absolute;
+}
+.exitButton {
+  width: 5vw;
+  color: white;
+  background-color: rgb(94, 207, 173);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.662);
+  border-radius: 5px;
+}
+.exitButton:active {
+  background-color: rgb(40, 64, 72);
+}
+.exitButton:hover {
+  background-color: lightblue;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+/*--------------------------add modal-----------------*/

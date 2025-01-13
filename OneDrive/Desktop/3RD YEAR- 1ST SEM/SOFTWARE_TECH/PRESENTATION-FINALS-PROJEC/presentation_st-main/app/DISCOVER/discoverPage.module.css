@@ -1,0 +1,381 @@
+@import "~maplibre-gl/dist/maplibre-gl.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.mainContainer {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+}
+.contentContainer {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  top: 10vh;
+  width: 100%;
+  height: 90vh;
+}
+.mapContainer {
+  position: relative;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 90%;
+  background-color: rgb(235, 235, 235);
+  border-radius: 5px;
+}
+.detailsContainer {
+  position: relative;
+  overflow-y: scroll;
+  padding-left: 2%;
+  padding-top: 1%;
+  width: 30%;
+  background-color: rgb(235, 235, 235);
+  height: 90%;
+  border-radius: 5px;
+}
+.apiMapContainer {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.132);
+}
+.map {
+  width: 95%;
+  height: 95%;
+  font-size: 8px;
+}
+.map:hover {
+  cursor: pointer;
+}
+.button {
+  background-color: rgb(139, 223, 188);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  top: 5%;
+  left: 80%;
+  width: 15%;
+  height: 27px;
+  border-radius: 5px;
+  color: black;
+  position: absolute;
+  font-size: 10px;
+  transition: ease-in 0.2s;
+}
+.button:hover {
+  background-color: lightblue;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+.button:active {
+  background-color: rgb(40, 64, 72);
+}
+/*-----------detection animation------------------*/
+.detectionContainer {
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+.detectionCenter {
+  position: absolute;
+  width: 1%;
+  height: 1%;
+  border-radius: 50%;
+  background-color: rgb(196, 23, 23);
+}
+.detectionLines {
+  position: absolute;
+  width: 1%;
+  height: 1%;
+  border-radius: 50%;
+  border: solid 3px white;
+  animation: detectionAnimation 4s infinite linear;
+}
+.detectionLines:nth-child(1) {
+  animation-delay: 2s;
+}
+@keyframes detectionAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    width: 70%;
+    height: 70%;
+  }
+}
+/*------------------------ search bar-----------*/
+.searchBarContainer {
+  border-radius: 20px;
+  width: 80%;
+  height: 30px;
+  border: solid 2px rgba(128, 128, 128, 0.545);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+}
+.searchBar {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 10px;
+  height: 100%;
+}
+.searchIconImage {
+  opacity: 0.5;
+  width: 6%;
+}
+.iconFilter {
+  position: absolute;
+  width: 8%;
+  right: 10%;
+  border-radius: 8px;
+}
+.iconFilter:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.iconFilter:active {
+  transform: rotateY("45deg");
+}
+.categoryContainer {
+  position: absolute;
+  top: 11%;
+  left: 0%;
+  height: 30px;
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+.categoryContainer2 {
+  position: absolute;
+  top: 18%;
+  left: 0%;
+  height: 30px;
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+.categoryButtons {
+  height: 25px;
+  width: 27%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  font-size: 8px;
+  padding: 2%;
+  transition: ease 0.1s;
+}
+.categoryButtons:hover {
+  transform: scale(1.005);
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.categoryButtons img {
+  width: 30%;
+}
+
+/*----------------------------Content-----------------*/
+.resultsContainer {
+  position: absolute;
+  top: 35%;
+  left: 0%;
+  width: 100%;
+  font-size: 10px;
+  padding-left: 6%;
+}
+.placeTitleHeader {
+  font-size: 20px;
+}
+.fectchImageButton {
+  border: solid 1px black;
+  height: 15px;
+  border-radius: 10px;
+}
+.placesName {
+  font-size: 15px;
+}
+/*-------------------------icon toggle clicked-------------------*/
+.cameraIconClicked {
+  background-color: rgb(139, 223, 188);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.mountainIconClicked {
+  background-color: rgb(139, 223, 188);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.shrineIconClicked {
+  background-color: rgb(139, 223, 188);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.hotelIconClicked {
+  background-color: rgb(139, 223, 188);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.naturalParkIconClicked {
+  background-color: rgb(139, 223, 188);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+.transportIconClicked {
+  background-color: rgb(139, 223, 188);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.116);
+}
+/*-------------------------------carousel  -----------------*/
+
+.fetchImageButton {
+  margin-right: auto;
+  width: 30%;
+  height: 90%;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.fetchImageButton2 {
+  margin-right: auto;
+  width: 30%;
+  height: 90%;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fetchImageButton:hover {
+  background-color: #45a049;
+}
+
+.carouselContainer {
+  border-radius: 5px;
+  width: 95%;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.sectionImageContainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.imageContainer {
+  width: 90%;
+  height: 90%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageContainer {
+  cursor: pointer !important;
+}
+.carouselImage {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+.carouselImage:hover {
+  transition: ease-in-out 1s;
+  transform: scale(1.05);
+}
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+/*--------------------loading animation------------------------*/
+.loadingContainerFetchingPlaces {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loadingContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.progressBarContainer {
+  width: 45%;
+  height: 15px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+.progressBar {
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgb(94, 207, 173);
+  animation: loadingAnimation 0.6s linear;
+}
+@keyframes loadingAnimation {
+  0% {
+    width: 0%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* .prevButton:hover,
+.nextButton:hover {
+  
+} */

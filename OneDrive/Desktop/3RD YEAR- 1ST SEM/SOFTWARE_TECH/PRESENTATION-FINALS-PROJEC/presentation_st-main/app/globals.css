@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(/FONTS/Poppins-SemiBold.ttf);
+}
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+} 
+
+ @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}  */
+
+body {
+  font-family: Poppins;
+  color: var(--foreground);
+  letter-spacing: 0.08rem;
+  /* background: var(--background); */
+  overflow-x: hidden;
+  scroll-behavior: smooth scroll;
+}
+main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+h1 {
+  display: block;
+  background-color: white;
+}
+h4 {
+  font-size: 30px;
+  margin-left: 5%;
+  color: white;
+}
+h5 {
+  bottom: 0%;
+  position: absolute;
+  font-size: large;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+}
+h6 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  font-size: 25px;
+  transform: translateX(-5%);
+  opacity: 0;
+}
+p {
+  display: block;
+}
+/*------------------toggle nightmode-------------*/
+#nightmodeContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: rgb(92, 141, 128);
+  width: 11%;
+  height: 55%;
+  padding: 0.6%;
+  border-radius: 20px;
+  transition: ease-in 0.2s;
+}
+#nightmodeContainer:hover {
+  cursor: pointer;
+}
+
+/*------------------PARALLAX LAYERS-------------*/
+#foregroundTree {
+  top: 10%;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+}
+#foregroundTower {
+  top: 10%;
+  position: absolute;
+  z-index: 10;
+}
+#parallaxLayer1 {
+  margin-top: 20%;
+  position: absolute;
+  z-index: 9;
+}
+#parallaxLayer2 {
+  position: absolute;
+  z-index: 8;
+}
+#parallaxLayer3 {
+  position: absolute;
+  z-index: 7;
+}
+
+#parallaxLayer4 {
+  position: absolute;
+  z-index: 6;
+}
+
+#parallaxLayer7 {
+  position: absolute;
+  z-index: 1;
+}
+#moon {
+  position: absolute;
+  z-index: 2;
+}
+/* ::-webkit-scrollbar{
+  width:1rem;s
+}
+::-webkit-scrollbar-track{
+  background: rgb(223, 223, 223);
+  width:1rem;
+}
+::-webkit-scrollbar-thumb{
+  background:rgb(91, 146, 135);
+  width:1rem;
+  border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(68, 139, 125);
+  cursor:pointer;
+} */

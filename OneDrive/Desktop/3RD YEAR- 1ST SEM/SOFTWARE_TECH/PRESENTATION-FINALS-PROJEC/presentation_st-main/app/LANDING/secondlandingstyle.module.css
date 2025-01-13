@@ -1,0 +1,100 @@
+.recommendedJapan {
+  margin-top: 10vh;
+  padding-top: 10vh;
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  left: 10%;
+  flex-direction: column;
+  position: relative;
+  gap: 30px;
+}
+.recommendedJapan:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: rgb(94, 207, 173);
+  top: 0%;
+}
+.recommendedHeader {
+  font-size: 30px;
+}
+/*--------------------------recommended------------------*/
+.aboutJapan {
+  padding-top: 20vh;
+  height: 260vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 3%;
+}
+.aboutColumn {
+  height: 100%;
+  width: 50%;
+  gap: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutRow {
+  position: relative;
+  height: 50vh;
+  width: 80%;
+  gap: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutColumn:after {
+  position: absolute;
+  bottom: 0%;
+  content: "";
+  height: 2px;
+  width: 49%;
+  background-color: rgb(94, 207, 173);
+}
+.aboutImage {
+  width: 60%;
+  height: 90%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.aboutImage img {
+  width: 120%;
+}
+.aboutDetails {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 10px;
+  flex-direction: column;
+  font-size: 13px;
+}
+.aboutHeader {
+  font-size: 25px;
+  font-weight: bold;
+}
+.aboutLearnMore {
+  position: relative;
+  color: rgb(211, 79, 79);
+}
+.aboutLearnMore:hover {
+  cursor: pointer;
+}
+.aboutLearnMore:after {
+  content: "";
+  width: 0%;
+  left: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0%;
+  transition: ease 1s;
+  background-color: rgb(211, 79, 79);
+}
+.aboutLearnMore:hover:after {
+  width: 100%;
+  cursor: pointer;
+}

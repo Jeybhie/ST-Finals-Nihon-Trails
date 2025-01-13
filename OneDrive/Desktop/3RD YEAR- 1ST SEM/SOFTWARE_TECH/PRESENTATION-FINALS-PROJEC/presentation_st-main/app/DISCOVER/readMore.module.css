@@ -1,0 +1,178 @@
+.readMoreBody {
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 100;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 5%;
+}
+.closeButton {
+  color: white;
+  background-color: rgb(139, 223, 188);
+  box-shadow: 5px, 5px, 5px, 0px;
+  position: absolute;
+  right: 0;
+  width: 45px;
+  height: 30px;
+  border-radius: 8px;
+}
+.modalBody {
+  position: relative;
+  border-radius: 12px;
+  background-color: white;
+  width: 65%;
+  height: 90vh;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 10vh;
+  padding-top: 30vh;
+}
+.closeRow {
+  top: 2%;
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  z-index: 10;
+  position: absolute;
+}
+/* .scrollableContentBody {
+  margin-top: 5vh;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  position: relative;
+  padding: 2%;
+  overflow-y: scroll;
+  gap: 20px;
+  width: 100%;
+  height: 100vh;
+} */
+.fetchedData {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+  position: absolute;
+  top: 80%;
+  padding-bottom: 20vh;
+}
+.title {
+  margin-top: 5vh;
+  font-size: 30px;
+  display: flex;
+  align-self: center;
+}
+.address {
+  font-size: 16px;
+}
+/*-------------------------------carousel  -----------------*/
+.carouselContainer {
+  top: 10%;
+  border-radius: 5px;
+  width: 95%;
+  height: 60vh;
+  background-color: rgba(139, 223, 188, 0.525);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.sectionImageContainer {
+  width: 100%;
+  height: 99.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imageContainer {
+  width: 90%;
+  height: 99.5%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageContainer {
+  cursor: pointer !important;
+}
+.carouselImage {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+.carouselImage:hover {
+  transition: ease-in-out 1s;
+  transform: scale(1.05);
+}
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  height: 100%;
+}
+
+.prevButton {
+  left: 10px;
+}
+.nextButton {
+  right: 10px;
+}
+/*-----------------content sections---------------------*/
+.addressRow {
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  width: 100%;
+  font-size: 20px;
+  position: relative;
+}
+.addressRow::after {
+  content: "";
+  background-color: rgb(139, 223, 188);
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  top: -70%;
+}
+.ratingsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  width: 100%;
+  font-size: 20px;
+  position: relative;
+}
+.Spacer {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.Spacing {
+  height: 2vh;
+  width: 100%;
+}
